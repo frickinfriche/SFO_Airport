@@ -2,7 +2,7 @@
 ## Consists of customer feedback for SFO airport during 2018
 setwd("C:/Users/Nikita/Desktop/POLI 5D/Project")
 library(readxl)
-sfo_2018_data <- read_excel("C:/Users/Nikita/Desktop/POLI 5D/Project/sfo 2018_data file_final_Weighted.xlsx")
+sfo_2018_data <- read_excel("C:/Users/Nikita/Desktop/POLI 5D/Project/SFO 2018 Airport Survey Data.xlsx")
 
 ## Calculate the mean of each categorization of satisfaction w/ roads for each specific overall customer satisfaction ranking
 for (i in c(1:5)) {
@@ -58,7 +58,7 @@ barplot(ROADS_given_ALL,
         xlab = "Satisfaction w/ Airport Overall",
         ylab = "Proportion of Road Satisfaction",
         main = "Proportion of Road Satisfaction in Given Overall Satisfaction",
-        legend.text = rownames(ALL_given_ROADS),
+        legend.text = rownames(ROADS_given_ALL),
         args.legend=list(title="Satisfaction w/ Roads"))
 
 ## Use Pearson chi-square test of independence to see if the two variables are independent or dependent.
